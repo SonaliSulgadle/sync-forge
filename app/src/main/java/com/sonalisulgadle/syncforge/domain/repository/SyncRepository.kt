@@ -4,6 +4,6 @@ import com.sonalisulgadle.syncforge.domain.model.SyncStatus
 import kotlinx.coroutines.flow.Flow
 
 interface SyncRepository {
-    fun enqueueSync()
+    suspend fun enqueueSync()
     fun observeSyncStatus(): Flow<SyncStatus>
 }
