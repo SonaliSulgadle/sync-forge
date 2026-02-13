@@ -1,9 +1,9 @@
 package com.sonalisulgadle.syncforge.domain.model
 
-enum class SyncStatus {
-    ENQUEUED,
-    RUNNING,
-    SUCCEEDED,
-    FAILED,
-    CANCELED
+sealed class SyncStatus {
+    object Enqueued : SyncStatus()
+    object Running : SyncStatus()
+    object Succeeded : SyncStatus()
+    object Canceled : SyncStatus()
+    data class Failed(val error: String? = null) : SyncStatus()
 }
