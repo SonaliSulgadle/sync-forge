@@ -15,6 +15,8 @@ viewmodelLifecycleCompose = "2.6.2"
 hilt = "2.56"
 ksp = "2.2.20-2.0.4"
 
+workRuntime = "2.9.0"
+hiltWork = "1.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -41,6 +43,9 @@ androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navig
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
 
+work-runtime = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "workRuntime" }
+hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltWork" }
+coroutine-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
