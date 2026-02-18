@@ -1,6 +1,7 @@
 package com.sonalisulgadle.syncforge.domain.model
 
 sealed class SyncStatus {
+    object Idle : SyncStatus()
     object Enqueued : SyncStatus()
     object Running : SyncStatus()
     object Succeeded : SyncStatus()
